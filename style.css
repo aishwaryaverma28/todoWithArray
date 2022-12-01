@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-image: linear-gradient(90deg, #ffba08,#d00000, #370617);
+}
+div{
+    margin: 1rem;
+    text-align: center;
+    font-size: larger;
+}
+form{
+    text-align: center;
+    padding: 2rem;
+}
+form input, form button, form select{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    /* background: white; */
+    border-radius: 5px;
+    text-align: center;
+
+}
+form input{
+    width: 40rem;
+}
+.btn{
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    /* z-index: 2; */
+    /* box-shadow: 3px 3px 3px 5px #ff9f1c; */
+}
+.edit{
+    background-color: #90be6d;
+}
+.delete{
+    background-color: #f94144;
+}
+/* .items{
+    display: flex;
+    justify-content: space-between;
+} */
+.li_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+    /* padding: 1rem; */
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    padding-left: 2rem;
+}
+.display_none{
+    display: none;
+}
+.checked{
+    text-decoration: line-through;
+    opacity: 5;
+}
+
+
+
+.high{
+    background-color: lightcoral;
+  }
+  .medium{
+    background-color: lightgoldenrodyellow;
+  }
+  .low{
+    background-color: lightgray;
+  }

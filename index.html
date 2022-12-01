@@ -5,10 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title></title>
+    <title>Priority Todo</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="section">
+            <form class="form">
+                <input type="text" class="from_input" placeholder="add your todo here">
+                <select id="priorityList">
+                    <option>Select Priority</option>
+                    <option class="high" value="high">High</option>
+                    <option class="medium" value="medium">Medium</option>
+                    <option class="low" value="low">Low</option>
+                </select>
+                <button class="btn js_add_btn">ADD</button>
+            </form>
+            <div class="error"></div>
+        </div>
+        <div class="section">
+            <button class="btn js_filter_btn all" data-filter="all">ALL</button>
+            <button class="btn js_filter_btn high" data-filter="high">HIGH</button>
+            <button class="btn js_filter_btn medium" data-filter="medium">MEDIUM</button>
+            <button class="btn js_filter_btn low" data-filter="low">LOW</button>
+        </div>
+        <div class="section">
+            <ul class="todo_list js_todo_list">
+                <li class="li_item">
+                    <span>leetcode ques</span>
+                    <div>
+                    <button class="btn done">DONE</button>
+                    <button class="btn edit">EDIT</button>
+                    <button class="btn delete">DELETE</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 <script src="app.js"></script>
 </html>
+
+
+
+
+<!-- 1.todo list(add,del,complete,filter)
+2.fetch 2 lecture
+3.analog clock
+3.closer lecture
+4.class notes revision -->
