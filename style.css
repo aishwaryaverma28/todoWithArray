@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: linear-gradient(90deg, #ffba08,#d00000, #370617);
+    background-image: linear-gradient(90deg, #f2b5d4,#eff7f6, #7bdff2);
 }
 div{
     margin: 1rem;
@@ -40,10 +40,11 @@ form input{
     /* box-shadow: 3px 3px 3px 5px #ff9f1c; */
 }
 .edit{
-    background-color: #90be6d;
+    background-color: #e0b1cb;
 }
 .delete{
-    background-color: #f94144;
+    background-color: #f694c1;
+    background-color: #ff0a54;
 }
 /* .items{
     display: flex;
@@ -70,11 +71,11 @@ form input{
 
 
 .high{
-    background-color: lightcoral;
+    background-color: #ffb3c1;
   }
   .medium{
-    background-color: lightgoldenrodyellow;
+    background-color: #fcf6bd;
   }
   .low{
-    background-color: lightgray;
+    background-color: #c7f9cc;
   }
