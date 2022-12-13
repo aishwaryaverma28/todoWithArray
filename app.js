@@ -1,4 +1,4 @@
-const todo=[];
+let todo=[];
 let listSpan,count = 0, completed = false;
 // querySelector
 const form = document.querySelector(".form");
@@ -11,12 +11,13 @@ const todoList=document.querySelector(".js_todo_list");
 
 
 
-
+//take data form local storage and add to list
 todo = JSON.parse(localStorage.getItem('todo'))??[];
 todo.map((ele)=>{
     createListElement(ele);
 })
 // function
+//add new list element
 function addItems(e){
     e.preventDefault();
     if(e.target.innerText == "Save")
@@ -36,14 +37,31 @@ function addItems(e){
                 completed:false
             };
             todo.push(todoObj);
+            localStorage.setItem("todo", JSON.stringify(todo));
             createListElement(todoObj);
             form.reset();
         }
     }
 }
-
+//create HTML Elements
 function createListElement(todoObj){
-    
+    const listEle = document.createElement("li");
+    listEle.setAttribute("class","li_item");
+    listEle.setAttribute("id", todoObj.id);
+    //listEle.setAttribute("class",todoObj.priority);
+    listEle.innerHTML= `<span>${todoObj.text}</span>
+                        <div>
+                        <button class="btn done">DONE</button>
+                        <button class="btn edit">EDIT</button>
+                        <button class="btn delete">DELETE</button>
+                        </div>`;
+    if (todoObj.priority == "high")
+        listEle.classList.add("high");
+    else if (todoObj.priority == "medium")
+        listEle.classList.add("medium");
+    else if (todoObj.priority == "low")
+        listEle.classList.add("low");    
+    todoList.appendChild(listEle);
 }
 
 
@@ -51,4 +69,9 @@ function createListElement(todoObj){
 // eventlistners
 addBtn.addEventListener("click", addItems)
 
-
+todoList.addEventListener("click",(event)=>{
+    // console.log(event);
+    if(event.target.classList.contains("delete"))
+        deleteList(event);
+    
+})

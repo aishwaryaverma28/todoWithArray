@@ -13,6 +13,13 @@ div{
     text-align: center;
     font-size: larger;
 }
+select{
+    background-color: aquamarine;
+}
+select:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
 form{
     text-align: center;
     padding: 2rem;
