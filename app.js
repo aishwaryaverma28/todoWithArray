@@ -63,7 +63,16 @@ function createListElement(todoObj){
         listEle.classList.add("low");    
     todoList.appendChild(listEle);
 }
-
+//=================================to delete list item==================
+function deleteList(event){
+    // console.log(event);
+    event.path[2].remove();
+    todo.forEach((ele,index)=>{
+        if(parseInt(event.path[2].id) == ele.id)
+        todo.splice(index,1);
+    })
+    localStorage.setItem("todo", JSON.stringify(todo));
+}
 
 
 // eventlistners
@@ -73,5 +82,9 @@ todoList.addEventListener("click",(event)=>{
     // console.log(event);
     if(event.target.classList.contains("delete"))
         deleteList(event);
+    else if(event.target.classList.contains("edit"))
+        editList(event);
+    else if(event.target.classList.contains("done"))
+        completedList(event);
     
 })
