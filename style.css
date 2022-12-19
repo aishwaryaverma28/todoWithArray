@@ -24,7 +24,7 @@ form{
     text-align: center;
     padding: 2rem;
 }
-form input, form button, form select{
+form input, form select{
     padding: 0.5rem;
     font-size: 1rem;
     border: none;
@@ -35,6 +35,12 @@ form input, form button, form select{
 }
 form input{
     width: 40rem;
+}
+.js_add_btn{
+    padding: 0.5rem;
+    width: 5rem;
+    background-color: #a8dadc;
+    border-radius: 5px;
 }
 .btn{
     padding: 0.5rem;
@@ -72,7 +78,7 @@ form input{
 }
 .checked{
     text-decoration: line-through;
-    opacity: 5;
+    opacity: 8;
 }
 
 
